@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <title>Write New Chat</title>
     <script>
       tailwind.config = {
@@ -70,6 +71,13 @@
                     <form method="post" action="/chats/<%= chat._id %>/?_method=DELETE">
                         <button class="*:size-full size-4 text-red-500">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="">
+                    <form method="GET" action="/chats/<%= chat.id %>">
+                        <button>
+                            Show
                         </button>
                     </form>
                 </div>
